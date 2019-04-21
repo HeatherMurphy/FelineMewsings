@@ -1,1 +1,48 @@
 /* You can add global styles to this file, and also import other style files */
+/*
+
+Stylesheet for Heathermurphy.tech
+Date:3/7/19
+By: Heather Murphy
+
+*/
+
+
+/*
+	page styles =====================================
+*/
+
+
+/*
+	text styles =====================================
+*/
+
+h1, h2, h3, h4, h5, h6 {
+  text-align: center;
+  color: black;
+}
+
+
+/*
+  background styles ====================================
+*/
+/*.crop {
+  overflow: hidden;
+}*/
+
+
+.img-fluid {
+  align-items: center;
+  opacity: .3;
+  border-radius: 5%;
+}
+
+
+.container-fluid {
+  min-width: 90%;
+  min-height: 90%;
+  position: absolute;
+  display: flex;
+  align-items: center;
+}
+

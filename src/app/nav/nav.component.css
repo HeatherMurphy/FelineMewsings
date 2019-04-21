@@ -1,0 +1,32 @@
+/*
+ nav styles ============================================
+*/
+ul {
+  display: inline-flex;
+  flex-direction: row;
+}
+
+li a {
+  color: #0d38e5;
+}
+
+  li a:link {
+    text-decoration: none;
+  }
+
+li {
+  padding-top: 10px;
+  padding-right: 10px;
+  padding-bottom: .5em;
+  padding-left: 10px;
+  margin-left: 10%;
+  margin-top: 20%;
+  list-style: none;
+  border: 1px solid black;
+  border-radius: 50%;
+  font-family: 'Permanent Marker', cursive;
+}
+
+ul li:hover {
+  background: purple;
+}

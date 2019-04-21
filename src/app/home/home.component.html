@@ -1,0 +1,15 @@
+<h1>Feline Mewsings Search</h1>
+
+<h3><input type="text" name="query" value="" /><input type="submit" name="submit" value="Submit" /></h3>
+
+
+<ul *ngIf="videos">
+
+  <li *ngFor="let video of videos.items">
+    <p>{{video.snippet.title}}</p>
+    <p>https://www.youtube.com/embed/{{video.id.videoId}}</p>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/"  frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  </li>
+</ul>
+
+<p>{{videos.nextPageToken}}</p>
