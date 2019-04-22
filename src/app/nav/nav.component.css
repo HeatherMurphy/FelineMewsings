@@ -1,6 +1,9 @@
 /*
  nav styles ============================================
 */
+header{
+  background: none;
+}
 ul {
   display: inline-flex;
   flex-direction: row;
@@ -23,6 +26,7 @@ li {
   margin-top: 20%;
   list-style: none;
   border: 1px solid black;
+  background-color:white;
   border-radius: 50%;
   font-family: 'Permanent Marker', cursive;
 }
