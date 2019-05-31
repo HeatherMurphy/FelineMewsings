@@ -7,31 +7,26 @@ By: Heather Murphy
 
 */
 
-
-/*
-	page styles =====================================
-*/
-
-
 /*
 	text styles =====================================
 */
 
 h1, h2, h3, h4, h5, h6 {
   text-align: center;
-  color: black;
+  color: mediumblue;
 }
 
 
 /*
   background styles ====================================
 */
-/*.crop {
+
+.crop {
   overflow: hidden;
-}*/
+}
 
 html{
-  background-image: url(./assets/catBackv2.png);
+  background-image: url(./assets/cats.png);
   background-position: left top;
 }
 

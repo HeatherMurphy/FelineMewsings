@@ -1,40 +1,37 @@
 
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-  <title></title>
-</head>
-<body>
-  <div class="row">
-    <div class="col-sm-4"></div>
-    <div class="col-sm-4" id="text">
-      <h1>Feline Mewsings Search</h1>
-    </div>
-    <div class="col-sm-4"></div>
-  </div>
 
   <div class="row">
     <div class="col-sm-4"></div>
     <div class="col-sm-4" id="text">
-      <h3><input type="text" name="query" value="" /><input type="submit" name="submit" value="Submit" /></h3>
+      <h1>Feline Mewsings Top 5 Vids</h1>
+    </div>
+    <div class="col-sm-4"></div>
+  </div>
+
+<div class="row">
+    <div class="col-sm-4"></div>
+    <div class="col-sm-4">
+      <form [formGroup]="messageForm" (ngSubmit)="onSubmit()">
+      <h3><input type="text" formControlName="query" value="" /><input type="submit" name="submit" value="Submit" /></h3>
+      </form>
     </div>
     <div class="col-sm-4"></div>
   </div>
   <div class="row">
-    <div class="col-sm-4"></div>
-    <div class="col-sm-4" id="text">
-      <ul *ngIf="videos">
+    <div class="col-sm-2"></div>
+    <div class="col-sm-8" >
+      <ul *ngIf="stuff">
 
-        <li *ngFor="let video of videos.items">
-          <h5>{{video.snippet.title}}</h5>
-          <h5>https://www.youtube.com/embed/{{video.id.videoId}}</h5>
-          <iframe width="560" height="315" src="" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <li *ngFor="let video of stuff.items" >
+                <!--<h5 id="text">{{video.snippet.title}}</h5>-->
+          <!--<div class="filler"></div>-->
+          <iframe width="760" height="415" [src]="UrlSanitizer(video.id.videoId)" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </li>
       </ul>
     </div>
-    <div class="col-sm-4"></div>
+    <div class="col-sm-2"></div>
   </div>
 
-  <p>{{videos.nextPageToken}}</p>
-</body>
-</html>
+  <!--<p>{{stuff.nextPageToken}}</p>-->
+
 

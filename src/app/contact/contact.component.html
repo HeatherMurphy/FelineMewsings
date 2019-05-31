@@ -1,28 +1,81 @@
-<h1>Contact Us</h1>
+<div class="row">
+  <div class="col-sm-4"></div>
+  <div class="col-sm-4">
+    <h1>Contact Us</h1>
+  </div>
+  <div class="col-sm-4"></div>
+</div>
 
-<form [formGroup] ="messageForm" (ngSubmit)="onSubmit()">
-  <h5 *ngIf ="success">Your form is valid!</h5>
 
-  <label>
-    Name:
-    <input type="text" formControlName="name" />
-    <div *ngIf="submitted && messageForm.controls.name.errors" class="error">
-      <div *ngIf="messageForm.controls.name.errors.required">Your name is Required</div>
+
+
+
+<form [formGroup]="messageForm" (ngSubmit)="onSubmit()">
+  <div class="row">
+    <div class="col-sm-4"></div>
+    <div class="col-sm-4">
+      <h5 *ngIf="success">Your form is valid!</h5>
     </div>
-  </label>
+    <div class="col-sm-4"></div>
+  </div>
+  
+  <div class="row">
 
-    Message:
-  <textarea formControlName="message"></textarea>
-  <div *ngIf="submitted && messageForm.controls.message.errors" class="error">
-    <div *ngIf="messageForm.controls.message.errors.required">Message field cannot be blank!</div>
+    <div class="col-sm-4"></div>
+    <div class="col-sm-4">
+      <label>
+        <h3>Name:</h3>
+        <input type="text" formControlName="name" />
+        <div *ngIf="submitted && messageForm.controls.name.errors" class="error">
+          <div *ngIf="messageForm.controls.name.errors.required">Your name is Required</div>
+        </div>
+      </label>
+    </div>
+    <div class="col-sm-4"></div>
+  </div>
+  <div class="row">
+    <div class="col-sm-2"></div>
+    <div class="col-sm-8">
+      <h3>Message:</h3>
+      <textarea formControlName="message" rows="4" cols="50"></textarea>
+      <div *ngIf="submitted && messageForm.controls.message.errors" class="error">
+        <div *ngIf="messageForm.controls.message.errors.required">Message field cannot be blank!</div>
+      </div>
+      <div class="col-sm-2"></div>
+    </div>
   </div>
 
-  <input type="submit" name="name" value="Send message" class="cta" />
+  <div class="row">
+    <div class="col-sm-4"></div>
+    <div class="col-sm-4">
+      <input type="submit" name="name" value="Send message" class="cta" />
+    </div>
+    <div class="col-sm-4"></div>
+
+  </div>
+
 </form>
 
 <div *ngIf="submitted" class="results">
-  <strong>Name:</strong>
-  <span>{{ messageForm.controls.name.value }}</span>
-  <strong>Message:</strong>
-  <span>{{ messageForm.controls.message.value }}</span>
+  <div class="row">
+    <div class="col-sm-4"></div>
+    <div class="col-sm-4">
+      <h3>
+        Name:
+        <span>{{ messageForm.controls.name.value }}</span>
+      </h3>
+    </div>
+    <div class="col-sm-4"></div>
+  </div>
+  <div class="row">
+    <div class="col-sm-4"></div>
+    <div class="col-sm-4">
+      <h3>
+        Message:
+        {{ messageForm.controls.message.value }}
+      </h3>
+    </div>
+    <div class="col-sm-4"></div>
+  </div>
+
 </div>

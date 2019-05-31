@@ -1,0 +1,14 @@
+.results{
+  color: blue;
+}
+.row{
+  text-align:center;
+}
+input{
+  text-align:start;
+}
+h1, h3, h5{
+  background-color:white;
+}
+
+.textarea{}

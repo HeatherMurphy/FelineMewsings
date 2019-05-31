@@ -8,7 +8,10 @@ import { NavComponent } from './nav/nav.component';
 import { AboutComponent } from './about/about.component';
 import { ContactComponent } from './contact/contact.component';
 import { HomeComponent } from './home/home.component';
-
+import { video } from '../Models/video.model';
+import { snippet } from '../Models/snippet.model';
+import { DataService } from 'src/app/data.service';
+import { Sanitizer } from './home/home.sanitizer';
 
 @NgModule({
   declarations: [
@@ -16,7 +19,7 @@ import { HomeComponent } from './home/home.component';
     NavComponent,
     AboutComponent,
     ContactComponent,
-    HomeComponent
+    HomeComponent,
   ],
   imports: [
     BrowserModule,
@@ -24,7 +27,7 @@ import { HomeComponent } from './home/home.component';
     HttpClientModule,
     ReactiveFormsModule
   ],
-  providers: [],
+  providers: [DataService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
